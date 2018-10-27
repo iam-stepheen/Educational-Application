@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+				<link rel="stylesheet" href="assets/vendor/font-awesome/css/font-awesome.min.css">
+				<link rel="stylesheet" href="assets/vendor/linearicons/style.css">
+				<!-- MAIN CSS -->
+				<link rel="stylesheet" href="assets/css/main.css">
+				<!-- FOR DEMO PURPOSES ONLY. You should remove this in your project -->
+				<link rel="stylesheet" href="assets/css/demo.css">
+				<!-- GOOGLE FONTS -->
+				<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700" rel="stylesheet">
+				<!-- ICONS -->
+				<link rel="apple-touch-icon" sizes="76x76" href="assets/img/favicon">
+				<link rel="icon" type="image/png" sizes="96x96" href="assets/img/favicon.png">
+
+<br><br><br><br><br>
+	<!-- WRAPPER -->
+	<div id="wrapper">
+		<div class="vertical-align-wrap">
+			<div class="vertical-align-middle">
+				<div class="auth-box ">
+					<div class="left">
+						<div class="content">
+							<div class="header">
+								<div class="logo text-center"></div>
+								<p class="lead">Register A New Member</p>
+								
+							</div>
+							<form class="form-auth-small" action="index.php">
+								<div class="form-group">
+									<label for="signin-email" class="control-label sr-only">FirstName</label>
+									<input type="text" [(ngModel)] = "firstname" name="firstname" class="form-control"  placeholder="FirstName">
+								</div>
+								<div class="form-group">
+									<label for="signin-password" class="control-label sr-only">SecondName</label>
+									<input type="text" [(ngModel)] = "secondname" name="secondname"class="form-control"  placeholder="SecondName">
+								</div>
+								
+							
+                
+								<div class="form-group">
+									<label for="signin-password" class="control-label sr-only">Email</label>
+									<input type="text" [(ngModel)] = "email" name="email"class="form-control"   placeholder="Email">
+								</div>
+								
+								<div class="form-group">
+                    <label for="signin-password" class="control-label sr-only">SecondName</label>
+                    <input type="password" [(ngModel)] = "password" name="password"class="form-control"  placeholder="Enter Password">
+                  </div>
+                  <div class="form-group">
+                      <label for="signin-password" class="control-label sr-only">SecondName</label>
+                      <input type="password" [(ngModel)] = "cpassword" name="cpassword"class="form-control"  placeholder="Confirm Password">
+					</div>
+					<div class="form-group">
+						<label for="signin-password" class="control-label sr-only">SecondName</label>
+						<input type="text" [(ngModel)] = "aboutme" name="aboutme"class="form-control"  placeholder="Tell Us About Yourself">
+					  </div>
+    
+								<button type="submit" class="btn btn-primary btn-lg btn-block" (click)='register()'>Register</button>
+							
+							</form>
+						</div>
+					</div>
+					<div class="right">
+						<div class="overlay"></div>
+						<div class="content text">
+							<h1 class="heading">GHM Attendance Apllication</h1>
+							<p>by SteveInc</p>
+							<br>
+               <p><a [routerLink] ="['/login']" > <span colour=#fffff>Login</span></a></p>
+						</div>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- END WRAPPER -->
+
+<style>
+	div.sidebar{
+		display: none !important;
+	}
+</style>

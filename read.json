@@ -1,0 +1,2 @@
+npm start // to start electron app
+npm run package-win //to build electron app for windows

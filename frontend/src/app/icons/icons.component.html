@@ -1,0 +1,77 @@
+
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="card card-plain">
+            <div class="card-header card-header-danger">
+                    <h4 class="card-title ">All Questions Uploaded</h4>
+                    
+                    
+                </div>
+                <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                      Questions
+                                    </th>
+                                    <th>
+                                           Answer
+                                          </th>
+                                </thead>
+                                <tbody>
+                                    
+                                    <tr *ngFor = "let items of questions;let i = index">
+                                        <td>
+                                           {{items.question_title}}
+                                        </td>
+                                        <td>
+                                                <button mat-raised-button type="submit" data-toggle = 'modal' data-target = "#coursemodal" (click)= "translate(items.question_title,items.question_image)"class="btn btn-danger pull-right">Answer</button>
+                                        </td>
+                                        
+                                        
+                                        
+                            
+                                    </tr>
+                                                                  </tbody>
+                            </table>
+                        </div>
+                    </div>
+           
+      </div>
+  </div>
+</div>
+<div id = "coursemodal" class="modal fade">
+        <div class="modal-dialog"  >
+          <div class="modal-content">
+            <div class="modal-header" >
+                    <h4 class="modal-title" > Enter Solution </h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            
+            </div>
+            <div class="modal-body">
+                <form>
+                     <div class="row">
+                            <div class="col-md-12">
+                             
+                              <mat-form-field class="example-full-width">
+                                 <textarea [(ngModel)] = "sourcetext" name="sourcetext" matInput placeholder="Enter Answer..."></textarea>
+                               </mat-form-field>
+                                <!-- <div class="form-group">
+
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
+                                        <textarea class="form-control" rows="5"></textarea>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                </form>
+                   
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" (click) = "question()">Post Answer</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+      </div>
+      </div>

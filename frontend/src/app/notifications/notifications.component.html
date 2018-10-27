@@ -1,0 +1,104 @@
+<div class="main-content">
+  <div class="container-fluid">
+      <div class="card">
+          <div class="card-header card-header-danger">
+              <h3 class="card-title">View All Questions And Answers</h3>
+              <p class="card-category">
+                
+              </p>
+          </div>
+          <div class="card-body">
+              <div class="row">
+                  <div class="col-md-6">
+                      <h4 class="card-title">Questions</h4>
+
+                      <div *ngFor = "let item of questions "class="alert alert-info">
+                          <span>{{item.question_title}}  <button mat-raised-button type="submit" (click)="answers(item.question_title,item.question_image)"class="btn btn-danger pull-right">View Answers</button></span>
+                         
+                      </div>
+                      
+                      
+                      
+                  </div>
+                  <div class="col-md-6">
+                      <h4 class="card-title">Answers</h4>
+            
+                      
+                            <div *ngFor = "let items of answers1" class="alert alert-info">
+                                    <!-- <span *ngFor = "let x of items.answers" >
+                                        {{x}}  
+                                        <button mat-raised-button type="submit" (click)="answers(item.question_title,item.question_image)"class="btn btn-danger pull-right">View Answers</button></span> -->
+                                <span>
+                                    {{items.answers.question_answer}}
+                                </span>        
+                                   
+                                </div>
+                         
+                     
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-12">
+              <div class="places-buttons">
+                  <div class="row">
+                      <div class="col-md-6 ml-auto mr-auto text-center">
+                          <h4 class="card-title">
+                              Click Below
+                              <p class="category">To Add Questions</p>
+                          </h4>
+                      </div>
+                  </div>
+                  <div class="row">
+                      <div class="col-lg-8 col-md-10 ml-auto mr-auto">
+                          <div class="row">
+                            
+                                    <div align="center"class="col-md-4">
+                                            <button mat-raised-button class="btn btn-danger btn-block" data-toggle = 'modal' data-target = "#coursemodal">Add Question</button>
+                                        </div>
+                              
+                              
+                             
+                          </div>
+                      </div>
+                  </div>
+                
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<div id = "coursemodal" class="modal fade">
+        <div class="modal-dialog"  >
+          <div class="modal-content">
+            <div class="modal-header" >
+                    <h4 class="modal-title" > Add Questions </h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            
+            </div>
+            <div class="modal-body">
+                <form>
+                     <div class="row">
+                            <div class="col-md-12">
+                             
+                              <mat-form-field class="example-full-width">
+                                 <textarea [(ngModel)] = "sourcetext" name="sourcetext" matInput placeholder="Enter Question..."></textarea>
+                               </mat-form-field>
+                                <!-- <div class="form-group">
+
+                                    <div class="form-group">
+                                        <label class="bmd-label-floating"> Lamborghini Mercy, Your chick she so thirsty, I'm in that two seat Lambo.</label>
+                                        <textarea class="form-control" rows="5"></textarea>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                </form>
+                   
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal" (click) = "question()">Add Question</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+      </div>
+      </div>
